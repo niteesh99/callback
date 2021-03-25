@@ -1,0 +1,61 @@
+</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+/*callback*/
+    const second = () => {
+  console.log('second');
+}
+const first = () => {
+  console.log('first');
+  second();
+  console.log('The End');
+}
+first();
+
+    /*calling function as an argument*/
+    function greet(name, callback) {
+    console.log('Hi' + ' ' + name);
+    callback();
+    function callMe() {
+    console.log('Hi I am niteesh');
+     }
+}
+var promise = new Promise(function(resolve, reject) {
+const x = "niteesh";
+const y = "hi"
+if(x === y) {
+	resolve();
+} else {
+	reject();
+}
+});
+promise.then(function () {
+		console.log('Success');
+	})
+    .catch(function () {
+		console.log('Some error has occured');
+	});
+    /*asynchronous*/
+    function showTime() {
+
+let dateTime= new Date();
+
+let time = dateTime.toLocaleTimeString();
+
+console.log(time)
+
+ setTimeout(showTime, 3000);
+}
+showTime();
+
+</script>
+<body>
+</html>
+
+
